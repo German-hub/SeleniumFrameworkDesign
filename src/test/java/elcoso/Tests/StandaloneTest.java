@@ -44,6 +44,7 @@ public class StandaloneTest {
 				.orElse(null);
 		prod.findElement(By.cssSelector(".card-body button:last-of-type")).click();
 
+		//git testing
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#toast-container")));
 		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating"))));
 		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();

@@ -15,7 +15,7 @@ import elcoso.pageobjects.ProductCatalog;
 
 public class ErrorValidations extends BaseTest{
 
-
+//git test
 		@Test
 		public void loginErrorValidation() throws IOException, InterruptedException {
 			
