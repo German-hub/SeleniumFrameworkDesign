@@ -5,6 +5,8 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.WheelInput;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,17 +27,17 @@ public class AbstractComponent {
 	@FindBy(css="[routerlink*='cart']")
 	WebElement cartHeader;
 
-	public void waitForElementToAppear(By findBy) {
+	public void waitForElementToAppear(By element) {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(element));
 
 	}
 	
-	public void waitForWebElementToAppear(WebElement findBy) {
+	public void waitForWebElementToAppear(WebElement element) {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.visibilityOf(findBy));
+		wait.until(ExpectedConditions.visibilityOf(element));
 
 	}
 
@@ -46,14 +48,19 @@ public class AbstractComponent {
 		return cartPage;
 	}
 
-	public void waitForElementToDisappear(WebElement elect) throws InterruptedException {
+	public void waitForElementToDisappear(WebElement element) throws InterruptedException {
 
 		Thread.sleep(1000);
 		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		//wait.until(ExpectedConditions.invisibilityOf(elect));
 	}
 
+	public void scrollDownuntilElementAppears(WebElement element) throws InterruptedException {
 
-
+        new Actions(driver)
+                .scrollToElement(element)
+                .perform();
+	}
+	
 
 }

@@ -1,9 +1,8 @@
 
 @tag
-Feature: Title of your feature
-  I want to use this template for my feature file
-
-  @Regression
+Feature: Error validation
+ 
+  @Error
   Scenario Outline: Title of your scenario outline
   	Given I landed on Ecommerce Page
     When Logged in with username <name> and password <password>

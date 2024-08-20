@@ -33,9 +33,12 @@ public class CartPage extends AbstractComponent{
 		return match;
 	}
 
-	public CheckoutPage goToCheckout() {
+	public CheckoutPage goToCheckout() throws InterruptedException {
+		
+		scrollDownuntilElementAppears(checkoutEle);
 		checkoutEle.click();
 		return new CheckoutPage(driver);
+		
 	}
 
 }
