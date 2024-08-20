@@ -5,7 +5,7 @@ Feature: Purchase the order with multiple products from Ecommerce Website
   Background:
   Given I landed on Ecommerce Page
   
-  @Regressions
+  @SubmitOrder
   Scenario Outline: Positive Test of Submitting the order
   
     Given Logged in with username <name> and password <password>

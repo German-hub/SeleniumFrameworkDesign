@@ -2,7 +2,7 @@
 @tag
 Feature: Error validation
  
-  @Error
+  @ErrorValidation
   Scenario Outline: Title of your scenario outline
   	Given I landed on Ecommerce Page
     When Logged in with username <name> and password <password>

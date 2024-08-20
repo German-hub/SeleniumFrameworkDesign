@@ -3,7 +3,7 @@ package Cucumber;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(features = "src/test/java/Cucumber", glue = "elcoso.stepDefinitions", monochrome = true, tags = "@Regression", plugin = {
+@CucumberOptions(features = "src/test/java/Cucumber", glue = "elcoso.stepDefinitions", monochrome = true, tags = "@SubmitOrder", plugin = {
 		"html:target/Cucumber.html" })
 public class TestNGTestRunner extends AbstractTestNGCucumberTests {
 
